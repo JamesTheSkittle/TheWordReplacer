@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<div id="topnav">The Word Replacer</div><br>
+<div id="tool"><br>
+<input autocomplete="off" id="word" placeholder="Word That Is Getting Replaced..."><br><br>
+<input autocomplete="off" id="replacew" placeholder="Replace Vowels With..."><br><br>
+<p id="button" onclick="replace()">Replace</p><br>
+Result: <p id="finalw"></p>
+</div>
+</body>
+<script>
+var $ = function(id) {
+  return document.getElementById(id);
+}
+
+function replace() {
+  var rw = $("replacew").value;
+  var word = $("word").value;
+  word = word.
+  replace(/a/g,rw).
+  replace(/e/g,rw).
+  replace(/i/g,rw).
+  replace(/o/g,rw).
+  replace(/u/g,rw);
+  $("finalw").innerHTML = word;
+}
+</script>
+<style>
+body {
+  margin: 0;
+}
+#button {
+  background-color: grey;
+  width: 20%;
+  text-align: center;
+  border: solid black;
+  border-radius: 9px;
+  margin: auto;
+  padding: 9px;
+  user-select: none;
+}
+#button:hover {
+  background-color: #666666;
+}
+#button:active {
+  background-color: #383838;
+}
+#topnav {
+  background-color: #3DD356;
+  font-size: 55px;
+  text-align: center;
+}
+#tool {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  background-color: #3CD1C7;
+  padding: 5px;
+  border: solid grey;
+  border-radius: 9px;
+}
+#tool input {
+  border-radius: 5px;
+  padding: 2px;
+  font-size: 30px;
+  
+}
+</style>
+</html>
