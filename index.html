@@ -21,11 +21,11 @@ function replace() {
   var rw = $("replacew").value;
   var word = $("word").value;
   word = word.
-  replace(/a/g,rw).
-  replace(/e/g,rw).
-  replace(/i/g,rw).
-  replace(/o/g,rw).
-  replace(/u/g,rw);
+  replace(/a/gi,rw).
+  replace(/e/gi,rw).
+  replace(/i/gi,rw).
+  replace(/o/gi,rw).
+  replace(/u/gi,rw);
   $("finalw").innerHTML = word;
 }
 </script>
